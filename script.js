@@ -128,6 +128,11 @@ const displayMovements = function (acc, sort = false) {
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
+  btnSort.addEventListener('click', function (e) {
+    e.preventDefault();
+    displayMovements(acc, !sort);
+    sort = !sort;
+  });
 };
 
 const calcDisplayBalance = function (acc) {
@@ -332,11 +337,4 @@ btnClose.addEventListener('click', function (e) {
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
-});
-
-let sorted = false;
-btnSort.addEventListener('click', function (e) {
-  e.preventDefault();
-  displayMovements(currentAccount.movements, !sorted);
-  sorted = !sorted;
 });
