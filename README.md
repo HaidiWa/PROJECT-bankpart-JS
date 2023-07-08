@@ -1,1 +1,1 @@
-# PROJECT-bankpart-JS WIP
+# PROJECT-bankpart
